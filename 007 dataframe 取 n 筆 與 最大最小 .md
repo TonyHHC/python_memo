@@ -15,7 +15,7 @@ from talib import abstract
 
 # 取得指定日期 前 n 筆 或 後 n 筆 資料
 def Find_n_Rows(dfSource, strDate, iNumRows):
-    iIndex = dfSource.loc[dfSource['date'] == strDate].index.values[0]
+    iIndex = dfSource.loc[dfSource['date'] >= strDate].index.values[0]
     if iNumRows < 0:
         dfTmp = dfSource.iloc[iIndex + iNumRows + 1:iIndex + 1]
     else:
