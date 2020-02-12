@@ -9,4 +9,7 @@ $ make
 $ sudo make install
 假如之前用anaconda安裝過，需要將生成的庫替換到anaconda安裝的目錄
 $ cp /usr/lib/libta_lib* /home/user/anaconda2/lib/
+$ git clone https://github.com/mrjbq7/ta-lib.git
+$ cd ta-lib  
+$ python setup.py install
 ```
