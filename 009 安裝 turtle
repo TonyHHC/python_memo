@@ -1,0 +1,12 @@
+pip3 install turtle
+
+因為turtle庫主要是在Python2中使用的，所以安裝的時候可能會提示錯誤
+
+解决的办法就是：按照给定的链接，把turtle包下载到本地，手动解压，修改setup.py文件再安装。
+
+打开setup.py文件，第40行修改为
+ except (ValueError, ve):
+原来的是Python2的写法，没有括号，加了括号之后Python3就能用了。
+
+用pip3安装修：
+pip install -e /home/tony/tmp/turtle-0.0.2
